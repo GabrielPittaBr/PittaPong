@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,33 +9,43 @@
     <link rel="icon" href="img/PittaPong Logo.png" type="image/png" />
     <link href="style.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="script.js"></script>
 </head>
+
 <body>
     <header>
 
-        <div class="logo">
-            <a href="index.html"></a>
-                <img src="img/PittaPong Logo.png" alt="PittaPong Logo" />
-                <h1>PittaPong</h1>
-            </a>
-        </div>
-
-        <div class="pesquisar">
-
-        </div>
-
-        <div class="carrinho-login">
-            <div class="carrinho">
-                <i class="fa-solid fa-cart-shopping"></i>
+        <div class="header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/PittaPong Logo.png" class="logo-img" alt="PittaPong Logo" />
+                    <h1>PittaPong</h1>
+                </a>
             </div>
-            <div class="login">
-                <i class="fa-solid fa-user"></i>
+
+            <div class="pesquisar">
+                <input type="text" class="texto-pesquisa" id="pesquisa" placeholder="Pesquisar...">
+                <label for="pesquisa">
+                    <img src="img/table-tennis-svgrepo-com (1).svg" alt="Lupa" class="lupa" for="pesquisa">
+                </label>
+            </div>
+
+            <div class="carrinho-login">
+                <div class="carrinho">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+                <div class="login">
+                    <i class="fa-solid fa-user"></i>
+                </div>
             </div>
         </div>
-
         <div class="navbar">
             <nav>
-
+                <a href="#"><i class="fa-sharp fa-solid fa-bars"></i> </a>
+                <a href="#">RAQUETES</a>
+                <a href="#">BOLINHAS</a>
+                <a href="#">REDES</a>
+                <a href="#">ACESSÓRIOS</a>
             </nav>
         </div>
 
@@ -48,4 +59,5 @@
 
     </footer>
 </body>
+
 </html>
