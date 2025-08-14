@@ -153,6 +153,7 @@ header {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
     display: flex;
     justify-content: center;
+    border-bottom: 1px solid #E2E3E4;
 }
 
 .navbar nav {
