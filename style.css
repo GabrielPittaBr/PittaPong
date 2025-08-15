@@ -2,8 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
     font-family: 'Montserrat', sans-serif;
+
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
@@ -11,18 +11,18 @@
 :root {
     --vermelho-principal: #E82023;
     --cinza-fundo-item: #EFEFEF;
+    --dourado: #DFA147;
 }
 
 body {
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto auto 1fr auto;
     grid-template-areas: "header header header"
-        "banner banner banner"
-        "main main main"
-        "footer footer footer";
+                         "banner banner banner"
+                         "main main main"
+                         "footer footer footer";
     min-height: 100vh;
-
-}
+}   
 
 header {
     grid-area: header;
@@ -35,6 +35,9 @@ header {
     height: auto;
     width: 100vw;
     overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .header {
@@ -56,6 +59,7 @@ header {
     max-width: 100%;
     height: 64px;
     font-size: 1.5rem;
+    transition: all 0.2s;
 }
 
 .logo a {
@@ -75,9 +79,8 @@ header {
 }
 
 .logo:hover {
-    scale: 1.05;
+    scale: 1.025;
     cursor: pointer;
-    transition: ease 0.2s;
 }
 
 .pesquisar {
@@ -87,6 +90,12 @@ header {
     display: flex;
     align-items: center;
     width: 700px;
+    transition: all 0.2s;
+}
+
+.pesquisar:hover {
+    filter: brightness(0.90);
+    transition: all 0.2s;
 }
 
 .pesquisar label {
@@ -178,21 +187,284 @@ header {
     background-color: rgba(0, 0, 0, 0.12);
 }
 
+
 .banner {
-    margin-top: 29px;
+    margin: 29px auto 0 auto;
     grid-area: banner;
     display: flex;
-    width: 100vw;
+    width: 100%;
+    max-width: 1920px;
     overflow: hidden;
-    height: 330px;
+    height: 450px;
+    min-width: 320px;
     align-items: center;
     background-color: var(--vermelho-principal);
 }
 
 .banner-img {
-    width: 50vw;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
+    width: 50%;
+    height: 100%;
     object-fit: cover;
+    transition: transform 0.2s ease;
+    overflow: hidden;
+}
+
+.banner-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    padding: 0 32px;
+}
+
+.banner a {
+    text-decoration: none;
+}
+
+.banner h4 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.banner h3 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.oldenracket-banner {
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+}
+
+.banner h2 {
+    color: var(--dourado);
+    font-size: 3.6rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+    position: relative;
+    background: linear-gradient(90deg, var(--dourado), #fff2cc 80%);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: background 0.4s;
+}
+
+.banner h2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--dourado), #fff2cc 80%);
+    border-radius: 2px;
+    transition: width 0.4s cubic-bezier(.4,0,.2,1);
+}
+
+.banner h2:hover {
+    background: linear-gradient(90deg, var(--dourado), #c49898 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.banner h2:hover::after {
+    width: 100%;
+    max-width: 100%;
+}
+
+.banner-button {
+    background-color: var(--dourado);
+    color: white;
+    width: 60%;
+    padding: 12px 24px;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-align: center;
+    transition: 
+        color 0.3s,
+        box-shadow 0.3s,
+        transform 0.2s,
+        letter-spacing 0.2s,
+        text-shadow 0.2s;
+}
+
+.banner-button:hover {
+    background: linear-gradient(90deg, var(--dourado) 0%, #ffdf80 100%);
+    color: var(--vermelho-principal);
+    box-shadow: 0 8px 32px rgba(223, 161, 71, 0.25), 0 2px 8px rgba(0,0,0,0.10);
+    transform: scale(1.05);
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px rgba(232,32,35,0.15);
+}
+
+main {
+    margin: 0 auto;
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
+    max-width: 1300px;
+}
+
+.principal-text {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin: 30px 0;
+    color: black;
+}
+
+.produtos {
+    display: flex;
+/*   flex-wrap: wrap; COLOCAR ISSO NO MEDIA QUERY*/
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+    margin-bottom: 32px;
+    width: 100%;
+}
+
+.produto {
+    min-width: 180px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    transition: 
+        transform 0.2s,
+        box-shadow 0.2s,
+        background-color 0.2s;
+}
+
+.produto-img {
+    width: 100%;
+    height: 100%;
+    background-color: var(--cinza-fundo-item);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    object-fit: cover;
+    transition: transform 0.2s ease;
+}
+
+.produto h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 10px 0 4px 0;
+}
+
+.produto h4 {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.produto p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 22px;
+}
+
+.produto:hover {
+    transform: scale(1.01) translateY(-5px);
+    cursor: pointer;
+}
+
+.produto:hover .produto-img img {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+
+/* footer */
+
+footer {
+    grid-area: footer;
+    background-color: var(--vermelho-principal);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+    transition: transform 0.2s;
+    margin-top: 10px;
+}
+
+.footer-logo img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    transition: transform 0.2s;
+}
+
+.footer-logo:hover {
+    transform: scale(1.1);
+}
+
+.footer-texto {
+    text-align: center;
+    font-size: 16px;
+}
+
+.contatos ul{
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    gap: 15px;
+}
+
+.whatsapp, .X, .instagram, .youtube {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 
+        transform 0.2s;
+    cursor: pointer;
+}
+
+.whatsapp img, .X img, .instagram img, .youtube img {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    transition: all 0.2s;
+    margin: 0 auto;
+}
+
+.whatsapp:hover {
+    transform: scale(1.1);
+    background-color: #25D366;
+}
+
+.X:hover {
+    transform: scale(1.1);
+    background-color: #1da1f2;
+}
+
+.instagram:hover {
+    transform: scale(1.1);
+    background: radial-gradient(circle at 30% 70%, #fdc468 0%, #df4996 60%, #833ab4 100%);
+}
+
+.youtube:hover {
+    transform: scale(1.1);
+    background-color: #ff0000;
 }
