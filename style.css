@@ -1222,9 +1222,26 @@ footer {
 
 @media screen and (max-width: 768px) {
 
+    header {
+        position: relative;
+    }
+
     .header {
         flex-direction: column;
         align-items: center;
+    }
+
+    .logo {
+        font-style: italic;
+        height: 50px;
+        font-size: 1rem;
+    }
+
+    .logo-img {
+        width: 67px;
+        height: 67px;
+        max-width: 67px;
+        max-height: 67px;
     }
 
     .pesquisar {
@@ -1239,6 +1256,8 @@ footer {
 
     .navbar nav {
         gap: 5px;
+        height: 60px;
+        overflow: scroll;
     }
 
     .banner {
@@ -1259,10 +1278,62 @@ footer {
         align-items: center;
         justify-content: center;
     }
-    
+
     .oldenracket-banner {
         margin: 0 auto;
         width: 100%;
+        justify-content: center;
     }
-    
+
+    .banner-button {
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 10px;
+    }
+
+    .banner-texto h2 {
+        font-size: 100%;
+    }
+
+    .btn-comprar {
+        width: 100%;
+    }
+
+    .container-carrinho {
+        grid-template-columns: 2fr;
+    }
+
+    .container-checkout {
+        display: grid;
+        grid-template-columns: 2fr;
+    }
+
+    .step-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .progress-tracker li:not(:last-child)::after {
+        top: 25px;
+    }
+
+    .step-label {
+        margin-top: 10px;
+        display: block;
+        font-size: 10px;
+    }
+
+    .carrinho-item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item-preco {
+        margin-top: 10px;
+    }
+
+    .container-login-cadastro {
+        width: 70vw;
+    }
+
 }
