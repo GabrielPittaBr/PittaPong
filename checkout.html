@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PittaPong - O melhor site de tênis de mesa do mundo." />
+    <title>PittaPong</title>
+    <link rel="icon" href="img/PittaPong Logo.png" type="image/png" />
+    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+
+        <div class="header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/PittaPong Logo.png" class="logo-img" alt="PittaPong Logo" />
+                    <h1>PittaPong</h1>
+                </a>
+            </div>
+
+            <div class="pesquisar">
+                <input type="text" class="texto-pesquisa" id="pesquisa" placeholder="Pesquisar...">
+                <label for="pesquisa">
+                    <img src="img/table-tennis-svgrepo-com (1).svg" alt="Lupa" class="lupa" for="pesquisa">
+                </label>
+            </div>
+
+            <div class="carrinho-login">
+                <div class="carrinho">
+                    <a href="carrinho.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="login">
+                    <a href="login.html"><i class="fa-solid fa-user"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="navbar">
+            <nav>
+                <a href="listar-produtos.html"><i class="fa-sharp fa-solid fa-bars"></i></a>
+                <a href="listar-produtos.html">RAQUETES</a>
+                <a href="listar-produtos.html">BOLINHAS</a>
+                <a href="listar-produtos.html">REDES</a>
+                <a href="listar-produtos.html">ACESSÓRIOS</a>
+            </nav>
+        </div>
+
+    </header>
+     <main>
+        <div class="container-checkout">
+            <div class="checkout-form">
+                <p>Carrinho  <strong>/ Checkout</strong></p>
+                <h1 class="checkout-titulo">Checkout</h1>
+
+                <section class="form-secao">
+                    <h2>Endereço de Entrega</h2>
+                    <div class="form-grupo">
+                        <label for="nome">Nome completo</label>
+                        <input type="text" id="nome" class="form-input">
+                    </div>
+                    <div class="form-grupo">
+                        <label for="pais">País</label>
+                        <select id="pais" class="form-input">
+                            <option>Brasil</option>
+                        </select>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="estado">Estado</label>
+                        <select id="estado" class="form-input">
+                            <option>Acre</option>
+                            <option>Alagoas</option>
+                            <option>Amapá</option>
+                            <option>Amazonas</option>
+                            <option>Bahia</option>
+                            <option>Ceará</option>
+                            <option>Distrito Federal</option>
+                            <option>Espírito Santo</option>
+                            <option>Goiás</option>
+                            <option>Maranhão</option>
+                            <option>Mato Grosso</option>
+                            <option>Mato Grosso do Sul</option>
+                            <option>Minas Gerais</option>
+                            <option>Pará</option>
+                            <option>Paraíba</option>
+                            <option>Paraná</option>
+                            <option>Pernambuco</option>
+                            <option>Piauí</option>
+                            <option>Rio de Janeiro</option>
+                            <option>Rio Grande do Norte</option>
+                            <option>Rio Grande do Sul</option>
+                            <option>Rondônia</option>
+                            <option>Roraima</option>
+                            <option>Santa Catarina</option>
+                            <option>São Paulo</option>
+                            <option>Sergipe</option>
+                            <option>Tocantins</option>
+                        </select>
+                    </div>
+                    <div class="form-linha">
+                        <div class="form-grupo">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" id="cidade" class="form-input">
+                        </div>
+                        <div class="form-grupo">
+                            <label for="cep">CEP</label>
+                            <input type="text" id="cep" class="form-input" placeholder="00000-000">
+                        </div>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="endereco">Endereço</label>
+                        <input type="text" id="endereco" class="form-input" placeholder="Rua Inkler, 2718, casa...">
+                    </div>
+                </section>
+
+                <section class="form-secao">
+                    <h2>Tipo de entrega</h2>
+                    <div class="radio-opcao">
+                        <input type="radio" id="entrega-padrao" name="entrega" checked>
+                        <label for="entrega-padrao">
+                            <span class="radio-titulo">Padrão</span>
+                            <span class="radio-subtitulo">Entrega de 10 a 25 dias úteis</span>
+                        </label>
+                    </div>
+                    <div class="radio-opcao">
+                        <input type="radio" id="entrega-rapido" name="entrega">
+                        <label for="entrega-rapido">
+                            <span class="radio-titulo">Rápido</span>
+                            <span class="radio-subtitulo">Entrega de 5 a 10 dias úteis</span>
+                        </label>
+                    </div>
+                </section>
+
+                <section class="form-secao">
+                    <h2>Forma de pagamento</h2>
+                    <div class="radio-opcao">
+                        <input type="radio" id="pagamento-credito" name="pagamento" checked>
+                        <label for="pagamento-credito">
+                            <span class="radio-titulo">Cartão de Crédito</span>
+                            <span class="radio-subtitulo">Até 12x sem juros</span>
+                        </label>
+                    </div>
+                    <div class="radio-opcao">
+                        <input type="radio" id="pagamento-debito" name="pagamento">
+                        <label for="pagamento-debito">
+                            <span class="radio-titulo">Cartão de Débito</span>
+                            <span class="radio-subtitulo">Desconto de 10%</span>
+                        </label>
+                    </div>
+                    <div class="radio-opcao">
+                        <input type="radio" id="pagamento-pix" name="pagamento">
+                        <label for="pagamento-pix">
+                            <span class="radio-titulo">PIX</span>
+                            <span class="radio-subtitulo">Desconto de 10%</span>
+                        </label>
+                    </div>
+                     <div class="radio-opcao">
+                        <input type="radio" id="pagamento-boleto" name="pagamento">
+                        <label for="pagamento-boleto">
+                            <span class="radio-titulo">Boleto</span>
+                            <span class="radio-subtitulo">Disponível para confirmação do pagamento em até 2 dias</span>
+                        </label>
+                    </div>
+                </section>
+            </div>
+
+            <aside class="checkout-resumo">
+                <h2>Resumo da compra</h2>
+                <div class="resumo-itens">
+                    <div class="resumo-item">
+                        <img src="img\Olden Racket.png" alt="Olden Racket" class="resumo-item-imagem">
+                        <div class="resumo-item-info">
+                            <p>Olden Racket</p>
+                            <span>Quantidade: 1</span>
+                        </div>
+                        <p class="resumo-item-preco">R$ 229,99</p>
+                    </div>
+                    <div class="resumo-item">
+                        <img src="img\Roiesk Balls.png" alt="Roiesk Balls" class="resumo-item-imagem">
+                        <div class="resumo-item-info">
+                            <p>Roiesk Balls</p>
+                            <span>Quantidade: 1</span>
+                        </div>
+                        <p class="resumo-item-preco">R$ 39,99</p>
+                    </div>
+                </div>
+                <div class="resumo-calculo">
+                    <div class="resumo-linha">
+                        <span>Subtotal</span>
+                        <span>R$ 268,98</span>
+                    </div>
+                    <div class="resumo-linha">
+                        <span>Frete</span>
+                        <span>Grátis</span>
+                    </div>
+                    <div class="resumo-linha">
+                        <span>Impostos</span>
+                        <span>R$ 999,00</span>
+                    </div>
+                    <div class="resumo-linha total">
+                        <span>Total</span>
+                        <span>R$ 268,98</span>
+                    </div>
+                </div>
+                <button class="btn-finalizar" onclick="window.location.href='acompanhamento.html'">Finalizar Pedido</button>
+            </aside>
+        </div>
+
+    </main>
+    <footer>
+        <div class="footer-logo">
+            <a href="index.html">
+                <img src="img/PittaPong Logo.png" class="footer-logo-img" alt="PittaPong Logo" />
+            </a>
+        </div>
+        <div class="contatos">
+            <ul>
+                <li class="whatsapp">
+                    <a href="web.whatsapp.com">
+                        <img src="img\whatsapp.png" alt="WhatsApp">
+                    </a>
+                </li>
+                <li class="X">
+                    <a href="x.com">
+                        <img src="img\twitter.png" alt="X">
+                    </a>
+                </li>
+                <li class="instagram">
+                    <a href="instagram.com">
+                        <img src="img\instagram.png" alt="instagram">
+                    </a>
+                </li>
+                <li class="youtube">
+                    <a href="youtube.com">
+                        <img src="img\youtube.png" alt="YouTube">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-texto">
+            <p>&copy; 2025 PittaPong - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
