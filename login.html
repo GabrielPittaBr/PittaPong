@@ -5,108 +5,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="PittaPong - O melhor site de tênis de mesa do mundo." />
-    <title>PittaPong</title>
+    <title>PittaPong - Login</title>
     <link rel="icon" href="img/PittaPong Logo.png" type="image/png" />
-    <link href="style.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <script src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
 </head>
 
 <body>
-    <header>
-
-        <div class="header">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="img/PittaPong Logo.png" class="logo-img" alt="PittaPong Logo" />
-                    <h1>PittaPong</h1>
-                </a>
-            </div>
-
-            <div class="pesquisar">
-                <input type="text" class="texto-pesquisa" id="pesquisa" placeholder="Pesquisar...">
-                <label for="pesquisa">
-                    <img src="img/table-tennis-svgrepo-com (1).svg" alt="Lupa" class="lupa" for="pesquisa">
-                </label>
-            </div>
-
-            <div class="carrinho-login">
-                <div class="carrinho">
-                    <a href="carrinho.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                </div>
-                <div class="login">
-                    <a href="login.html"><i class="fa-solid fa-user"></i></a>
+    <header class="sticky-top">
+        <div class="top-header py-2">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <div class="logo">
+                            <a href="index.html" class="d-flex align-items-center">
+                                <img src="img/PittaPong Logo.png" class="logo-img" alt="PittaPong Logo" />
+                                <h1 class="fs-3 mb-0 ms-1 text-white">PittaPong</h1>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="pesquisar d-flex align-items-center mx-auto" style="max-width: 600px;">
+                            <input type="text" class="texto-pesquisa flex-grow-1" id="pesquisa" placeholder="Pesquisar...">
+                            <label for="pesquisa" class="mb-0 ms-2">
+                                <img src="img/table-tennis-svgrepo-com (1).svg" alt="Buscar" class="lupa">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="carrinho-login d-flex align-items-center gap-3">
+                            <a href="carrinho.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="login.html"><i class="fa-solid fa-user"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="navbar">
-            <nav>
-                <a href="listar-produtos.html"><i class="fa-sharp fa-solid fa-bars"></i></a>
-                <a href="listar-produtos.html">RAQUETES</a>
-                <a href="listar-produtos.html">BOLINHAS</a>
-                <a href="listar-produtos.html">REDES</a>
-                <a href="listar-produtos.html">ACESSÓRIOS</a>
-            </nav>
+        <div class="sub-navbar bg-white">
+            <div class="container">
+                <nav class="d-flex justify-content-center gap-2 gap-md-4 py-1 flex-wrap">
+                    <a href="listar-produtos.html"><i class="fa-sharp fa-solid fa-bars d-md-none"></i></a>
+                    <a href="listar-produtos.html">RAQUETES</a>
+                    <a href="listar-produtos.html">BOLINHAS</a>
+                    <a href="listar-produtos.html">REDES</a>
+                    <a href="listar-produtos.html">ACESSÓRIOS</a>
+                </nav>
+            </div>
         </div>
-
     </header>
-    <main>
-        <div class="container-login-cadastro">
-            <h1 class="titulo-login">Login</h1>
-            <form action="login.html" method="post" class="form-login">
-                <div class="form-grupo">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" class="form-input" placeholder="Digite seu email"
-                        required>
+
+    <main class="d-flex align-items-center justify-content-center flex-grow-1 py-5">
+        <div class="container" style="max-width: 600px;">
+            <h1 class="text-center fw-bold mb-4" style="font-size: 2.5rem;">Login</h1>
+            <form action="login.html" method="post">
+                <div class="mb-3">
+                    <label for="email" class="form-label fw-semibold">Email</label>
+                    <input type="email" id="email" name="email" class="form-control form-control-lg" placeholder="Digite seu email" required>
                 </div>
-                <div class="form-grupo">
-                    <label for="senha">Senha:</label>
-                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha" class="form-input"
-                        required>
+                <div class="mb-2">
+                    <label for="senha" class="form-label fw-semibold">Senha:</label>
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha" class="form-control form-control-lg" required>
                 </div>
-                <p class="esqueci-senha">Esqueci a senha</p>
-                <button type="submit" class="btn-login" onclick="window.location.href='index.html'">Entrar</button>
+                <p class="esqueci-senha mb-4">Esqueci a senha</p>
+                <button type="submit" class="btn btn-login w-100 py-3" onclick="window.location.href='index.html'">Entrar</button>
             </form>
-            <p class="texto-cadastro">Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+            <p class="texto-cadastro text-center mt-4">Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
         </div>
     </main>
-    <footer>
-        <div class="footer-logo">
-            <a href="index.html">
-                <img src="img/PittaPong Logo.png" class="footer-logo-img" alt="PittaPong Logo" />
-            </a>
-        </div>
-        <div class="contatos">
-            <ul>
-                <li class="whatsapp">
-                    <a href="web.whatsapp.com">
-                        <img src="img\whatsapp.png" alt="WhatsApp">
-                    </a>
-                </li>
-                <li class="X">
-                    <a href="x.com">
-                        <img src="img\twitter.png" alt="X">
-                    </a>
-                </li>
-                <li class="instagram">
-                    <a href="instagram.com">
-                        <img src="img\instagram.png" alt="instagram">
-                    </a>
-                </li>
-                <li class="youtube">
-                    <a href="youtube.com">
-                        <img src="img\youtube.png" alt="YouTube">
-                    </a>
-                </li>
+
+    <footer class="text-white py-4">
+        <div class="container text-center">
+            <div class="mb-3">
+                <a href="index.html">
+                    <img src="img/PittaPong Logo.png" class="footer-logo-img" alt="PittaPong Logo" />
+                </a>
+            </div>
+            <ul class="list-unstyled d-flex justify-content-center gap-3 mb-3">
+                <li><a href="https://web.whatsapp.com" class="social-icon whatsapp"><img src="img/whatsapp.png" alt="WhatsApp"></a></li>
+                <li><a href="https://x.com" class="social-icon twitter"><img src="img/twitter.png" alt="X"></a></li>
+                <li><a href="https://instagram.com" class="social-icon instagram"><img src="img/instagram.png" alt="Instagram"></a></li>
+                <li><a href="https://youtube.com" class="social-icon youtube"><img src="img/youtube.png" alt="YouTube"></a></li>
             </ul>
-        </div>
-        <div class="footer-texto">
-            <p>&copy; 2025 PittaPong - Todos os direitos reservados.</p>
+            <p class="mb-0">&copy; 2025 PittaPong - Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

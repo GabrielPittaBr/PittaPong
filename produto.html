@@ -5,182 +5,158 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="PittaPong - O melhor site de tênis de mesa do mundo." />
-    <title>PittaPong</title>
+    <title>PittaPong - Olden Racket</title>
     <link rel="icon" href="img/PittaPong Logo.png" type="image/png" />
-    <link href="style.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <script src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
 </head>
 
 <body>
-    <header>
-
-        <div class="header">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="img/PittaPong Logo.png" class="logo-img" alt="PittaPong Logo" />
-                    <h1>PittaPong</h1>
-                </a>
-            </div>
-
-            <div class="pesquisar">
-                <input type="text" class="texto-pesquisa" id="pesquisa" placeholder="Pesquisar...">
-                <label for="pesquisa">
-                    <img src="img/table-tennis-svgrepo-com (1).svg" alt="Lupa" class="lupa" for="pesquisa">
-                </label>
-            </div>
-
-            <div class="carrinho-login">
-                <div class="carrinho">
-                    <a href="carrinho.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                </div>
-                <div class="login">
-                    <a href="login.html"><i class="fa-solid fa-user"></i></a>
+    <header class="sticky-top">
+        <div class="top-header py-2">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <div class="logo">
+                            <a href="index.html" class="d-flex align-items-center">
+                                <img src="img/PittaPong Logo.png" class="logo-img" alt="PittaPong Logo" />
+                                <h1 class="fs-3 mb-0 ms-1 text-white">PittaPong</h1>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="pesquisar d-flex align-items-center mx-auto" style="max-width: 600px;">
+                            <input type="text" class="texto-pesquisa flex-grow-1" id="pesquisa" placeholder="Pesquisar...">
+                            <label for="pesquisa" class="mb-0 ms-2">
+                                <img src="img/table-tennis-svgrepo-com (1).svg" alt="Buscar" class="lupa">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="carrinho-login d-flex align-items-center gap-3">
+                            <a href="carrinho.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="login.html"><i class="fa-solid fa-user"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="navbar">
-            <nav>
-                <a href="listar-produtos.html"><i class="fa-sharp fa-solid fa-bars"></i></a>
-                <a href="listar-produtos.html">RAQUETES</a>
-                <a href="listar-produtos.html">BOLINHAS</a>
-                <a href="listar-produtos.html">REDES</a>
-                <a href="listar-produtos.html">ACESSÓRIOS</a>
-            </nav>
+        <div class="sub-navbar bg-white">
+            <div class="container">
+                <nav class="d-flex justify-content-center gap-2 gap-md-4 py-1 flex-wrap">
+                    <a href="listar-produtos.html"><i class="fa-sharp fa-solid fa-bars d-md-none"></i></a>
+                    <a href="listar-produtos.html">RAQUETES</a>
+                    <a href="listar-produtos.html">BOLINHAS</a>
+                    <a href="listar-produtos.html">REDES</a>
+                    <a href="listar-produtos.html">ACESSÓRIOS</a>
+                </nav>
+            </div>
         </div>
-
     </header>
-    <main>
-        <div class="container-produto-detalhes">
-            <div class="produto-imagens">
-                <p class="caminho-produto"><strong>Raquetes</strong> / Olden Racket</p>
-                <div class="imagem-principal">
-                    <img src="img\Olden Racket.png" alt="Raquete Olden Racket" id="imagem-produto-principal">
+
+    <main class="container py-4">
+        <!-- Product Detail -->
+        <div class="row g-4 g-lg-5 mb-5">
+            <div class="col-lg-6">
+                <p class="mb-3"><strong>Raquetes</strong> / Olden Racket</p>
+                <div class="imagem-principal d-flex align-items-center justify-content-center">
+                    <img src="img/Olden Racket.png" alt="Raquete Olden Racket" id="imagem-produto-principal">
                 </div>
-                <div class="imagens-miniaturas">
-                    <div class="miniatura-item ativa">
-                        <img src="img\Olden Racket.png" alt="Miniatura Olden Racket" class="miniatura-img">
+                <div class="d-flex gap-3 mt-3">
+                    <div class="miniatura-item ativa" style="width: 80px;">
+                        <img src="img/Olden Racket.png" alt="Miniatura 1">
                     </div>
-                    <div class="miniatura-item">
-                        <img src="img\Olden Racket.png" alt="Miniatura Olden Racket" class="miniatura-img">
+                    <div class="miniatura-item" style="width: 80px;">
+                        <img src="img/Olden Racket.png" alt="Miniatura 2">
                     </div>
-                    <div class="miniatura-item">
-                        <img src="img\Olden Racket.png" alt="Miniatura Olden Racket" class="miniatura-img">
+                    <div class="miniatura-item" style="width: 80px;">
+                        <img src="img/Olden Racket.png" alt="Miniatura 3">
                     </div>
-                    <div class="miniatura-item">
-                        <img src="img\Olden Racket.png" alt="Miniatura Olden Racket" class="miniatura-img">
+                    <div class="miniatura-item" style="width: 80px;">
+                        <img src="img/Olden Racket.png" alt="Miniatura 4">
                     </div>
                 </div>
             </div>
-
-            <div class="produto-info">
+            <div class="col-lg-6">
                 <h1 class="produto-titulo">Olden Racket</h1>
-                <p class="produto-preco">R$ 229,99</p>
-                <p class="produto-descricao">
+                <p class="produto-preco mb-4">R$ 229,99</p>
+                <p class="produto-descricao mb-5">
                     Desbloqueie seu verdadeiro potencial com essa mega raquete balosa.
                     Essa raquete foi usada pelo profissional Oldenburg no Torneio 20x CIMOL (muito difícil).
                 </p>
-                <button class="btn-comprar" onclick="window.location.href='carrinho.html'">Adicionar ao
-                    carrinho</button>
+                <button class="btn btn-comprar w-100 w-lg-75" onclick="window.location.href='carrinho.html'">Adicionar ao carrinho</button>
             </div>
         </div>
-        <h2 class="principal-text">Outros itens</h2>
-        <div class="produtos">
-            <div class="produto">
-                <div class="produto-img">
-                    <img src="img\Roiesk Balls.png" alt="Roiesk Balls" class="produto-img">
+
+        <!-- Other Items -->
+        <h2 class="text-center fw-semibold mb-4" style="font-size: 2rem;">Outros itens</h2>
+        <div class="row g-4 mb-5 justify-content-center">
+            <div class="col-6 col-md-3">
+                <div class="produto-card">
+                    <div class="produto-img-wrapper">
+                        <img src="img/Roiesk Balls.png" alt="Roiesk Balls">
+                    </div>
+                    <a href="produto.html"><h3 class="mt-2">ROIESK BALLS</h3></a>
+                    <a href="produto.html"><h4>PittaPong</h4></a>
+                    <a href="produto.html"><p class="preco mt-2">R$ 39,99</p></a>
                 </div>
-                <a href="produto.html">
-                    <h3>ROIESK BALLS</h3>
-                </a>
-                <a href="produto.html">
-                    <h4>PittaPong</h4>
-                </a>
-                <a href="produto.html">
-                    <p>R$ 39,99</p>
-                </a>
             </div>
-            <div class="produto">
-                <div class="produto-img">
-                    <img src="img\Olden Racket.png" alt="Olden Racket" class="produto-img">
+            <div class="col-6 col-md-3">
+                <div class="produto-card">
+                    <div class="produto-img-wrapper">
+                        <img src="img/Olden Racket.png" alt="Olden Racket">
+                    </div>
+                    <a href="produto.html"><h3 class="mt-2">OLDEN RACKET</h3></a>
+                    <a href="produto.html"><h4>PittaPong</h4></a>
+                    <a href="produto.html"><p class="preco mt-2">R$ 229,99</p></a>
                 </div>
-                <a href="produto.html">
-                    <h3>OLDEN RACKET</h3>
-                </a>
-                <a href="produto.html">
-                    <h4>PittaPong</h4>
-                </a>
-                <a href="produto.html">
-                    <p>R$ 229,99</p>
-                </a>
             </div>
-            <div class="produto">
-                <div class="produto-img">
-                    <img src="img\Roiesk Balls.png" alt="Roiesk Balls" class="produto-img">
+            <div class="col-6 col-md-3">
+                <div class="produto-card">
+                    <div class="produto-img-wrapper">
+                        <img src="img/Roiesk Balls.png" alt="Roiesk Balls">
+                    </div>
+                    <a href="produto.html"><h3 class="mt-2">ROIESK BALLS</h3></a>
+                    <a href="produto.html"><h4>PittaPong</h4></a>
+                    <a href="produto.html"><p class="preco mt-2">R$ 39,99</p></a>
                 </div>
-                <a href="produto.html">
-                    <h3>ROIESK BALLS</h3>
-                </a>
-                <a href="produto.html">
-                    <h4>PittaPong</h4>
-                </a>
-                <a href="produto.html">
-                    <p>R$ 39,99</p>
-                </a>
             </div>
-            <div class="produto">
-                <div class="produto-img">
-                    <img src="img\Olden Racket.png" alt="Olden Racket" class="produto-img">
+            <div class="col-6 col-md-3">
+                <div class="produto-card">
+                    <div class="produto-img-wrapper">
+                        <img src="img/Olden Racket.png" alt="Olden Racket">
+                    </div>
+                    <a href="produto.html"><h3 class="mt-2">OLDEN RACKET</h3></a>
+                    <a href="produto.html"><h4>PittaPong</h4></a>
+                    <a href="produto.html"><p class="preco mt-2">R$ 229,99</p></a>
                 </div>
-                <a href="produto.html">
-                    <h3>OLDEN RACKET</h3>
-                </a>
-                <a href="produto.html">
-                    <h4>PittaPong</h4>
-                </a>
-                <a href="produto.html">
-                    <p>R$ 229,99</p>
-                </a>
             </div>
         </div>
     </main>
-    <footer>
-        <div class="footer-logo">
-            <a href="index.html">
-                <img src="img/PittaPong Logo.png" class="footer-logo-img" alt="PittaPong Logo" />
-            </a>
-        </div>
-        <div class="contatos">
-            <ul>
-                <li class="whatsapp">
-                    <a href="web.whatsapp.com">
-                        <img src="img\whatsapp.png" alt="WhatsApp">
-                    </a>
-                </li>
-                <li class="X">
-                    <a href="x.com">
-                        <img src="img\twitter.png" alt="X">
-                    </a>
-                </li>
-                <li class="instagram">
-                    <a href="instagram.com">
-                        <img src="img\instagram.png" alt="instagram">
-                    </a>
-                </li>
-                <li class="youtube">
-                    <a href="youtube.com">
-                        <img src="img\youtube.png" alt="YouTube">
-                    </a>
-                </li>
+
+    <footer class="text-white py-4">
+        <div class="container text-center">
+            <div class="mb-3">
+                <a href="index.html">
+                    <img src="img/PittaPong Logo.png" class="footer-logo-img" alt="PittaPong Logo" />
+                </a>
+            </div>
+            <ul class="list-unstyled d-flex justify-content-center gap-3 mb-3">
+                <li><a href="https://web.whatsapp.com" class="social-icon whatsapp"><img src="img/whatsapp.png" alt="WhatsApp"></a></li>
+                <li><a href="https://x.com" class="social-icon twitter"><img src="img/twitter.png" alt="X"></a></li>
+                <li><a href="https://instagram.com" class="social-icon instagram"><img src="img/instagram.png" alt="Instagram"></a></li>
+                <li><a href="https://youtube.com" class="social-icon youtube"><img src="img/youtube.png" alt="YouTube"></a></li>
             </ul>
-        </div>
-        <div class="footer-texto">
-            <p>&copy; 2025 PittaPong - Todos os direitos reservados.</p>
+            <p class="mb-0">&copy; 2025 PittaPong - Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
